@@ -4,17 +4,109 @@
   box-sizing: border-box;
 }
 
+:root {
+  --mani-color: #f2da91;
+  --opacity-color: #ffd19119;
+}
+
 @font-face {
-  font-family: font-title;
-  src: url(./font/font-title/RubikDoodleShadow-Regular.ttf);
+  font-family: bold;
+  src: url(./font/static/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+  font-family: regular;
+  src: url(./font/static/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-family: light;
+  src: url(./font/static/RobotoCondensed-Light.ttf);
+}
+@font-face {
+  font-family: font-name;
+  src: url(./font/static/SourceCodePro-Bold.ttf);
 }
 
-header {
-  color: rgb(255, 208, 0);
-  background-color: aqua;
-  font-family: font-title;
+body {
+  width: 100%;
+  height: 100%;
+  background: url(./image/nhung-gi-toi-chup-duoc/qua-thong.JPG) no-repeat 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.head {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  top: 100px;
+  justify-content: center;
+}
+
+.head span {
+  color: #333;
+  width: 40%;
+  height: 100px;
+  border-radius: 100px;
+  background: url(./image/anh-toi/me-4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: block;
   text-align: center;
+  line-height: 100px;
+  font-family: font-name;
+  font-size: 35px;
+}
+/* end head */
+
+.content {
+  color: rgb(255, 255, 255);
+  font-family: regular;
+  font-size: 30px;
+  line-height: 80px;
+  padding: 20px;
+  background-color: var(--opacity-color);
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
-.ic-title {
+.content .profile-info {
 }
+
+.content .profile-info > p:nth-child(4)::after {
+  content: "";
+  background-image: url(https://cdn4.iconfinder.com/data/icons/animal-29/64/gorilla-animal-monkey-kingkong-ape-mammal-kong-512.png);
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.content aside img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* end content */
+
+nav {
+  background-color: var(--mani-color);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a img {
+  width: 60px;
+  height: 60px;
+}
+/* end nav */
